@@ -1,0 +1,13 @@
+import base64
+password=str(input())
+password=password.encode("ascii")
+password_write=str(password)
+f=open("password.txt","w")
+f.write(password_write)
+f.close()
+f=open("password.txt","r")
+password=f.read()
+f.close()
+password_result=bytes(password)
+password_result=password_result.decode("ascii")
+print(password_result)
